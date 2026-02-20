@@ -1,0 +1,26 @@
+# FAOSTAT Pipeline default configuration
+# These values are used when no CLI flags are provided
+
+defaults:
+  lang: en
+  output_dir: ./output
+
+# Default domains to fetch when running `faostat-pipeline fetch --all`
+# See full list with: faostat-pipeline list-domains
+domains:
+- code: QCL
+  name: Crops and Livestock Products
+- code: EM
+  name: Emissions indicators
+- code: GT
+  name: Emissions totals
+- code: RFN
+  name: Fertilizers by Nutrient
+- code: GCE
+  name: Emissions from Crops
+
+# Output settings
+output:
+  csv: true
+  parquet: true
+  parquet_compression: snappy # snappy, gzip, brotli, or none
